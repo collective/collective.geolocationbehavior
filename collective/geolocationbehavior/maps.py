@@ -1,17 +1,29 @@
 from zope.interface import implements
 from zope.component import adapts
 
+from Products.CMFCore.interfaces import IFolderish
 from Products.Maps.interfaces import IMarker
 from Products.Maps.adapters import BaseMap
 
 from collective.geolocationbehavior.geolocation import IGeolocatableMarker
 from collective.geolocationbehavior.geolocation import IGeolocatable
 
+
 class GeolocatableMap(BaseMap):
     adapts(IGeolocatableMarker)
     
     def getMarkers(self):
         return GeolocatableMarker(self)
+
+class ContainerMap(BaseMap):
+    adapts(IFolderish)
+    
+    def __init__(self, context):
+        self.context = context
+    
+    def getMarkers(self):
+        # return GeolocatableMarker(self)
+        return None
 
 class GeolocatableMarker(object):
     implements(IMarker)

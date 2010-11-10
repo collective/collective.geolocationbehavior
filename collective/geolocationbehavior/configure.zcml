@@ -33,12 +33,27 @@
       
   <!-- Maps integration for behavior -->
   <browser:page
+      for="Products.CMFCore.interfaces.IFolderish"
+      name="maps_googlemaps_enabled_view"
+      class="Products.Maps.browser.map.DefaultMapView"
+      permission="zope.Public"
+      allowed_interface="Products.Maps.interfaces.map.IMapEnabledView"
+      />
+  
+  <browser:page
       for=".geolocation.IGeolocatableMarker"
       name="maps_googlemaps_view"
       class="Products.Maps.browser.map.DefaultMapView"
       permission="zope2.View"
       allowed_interface="Products.Maps.interfaces.map.IMapView"
       />
+
+  <adapter
+      for="Products.CMFCore.interfaces.IFolderish"
+      provides="Products.Maps.interfaces.IMap"
+      factory=".maps.ContainerMap"
+      />
+            
   <adapter
       for=".geolocation.IGeolocatableMarker"
       provides="Products.Maps.interfaces.IMap"

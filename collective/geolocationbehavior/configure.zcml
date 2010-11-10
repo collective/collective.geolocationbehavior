@@ -1,0 +1,53 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:grok="http://namespaces.zope.org/grok"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="collective.geolocationbehavior">
+
+  <!-- Include configuration for dependencies listed in setup.py -->
+  <includeDependencies package="." />
+  
+  <!-- Grok the package to initialize schema interfaces and content classes -->
+  <grok:grok package="." />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="collective.geolocationbehavior"
+      directory="profiles/default"
+      description="Installs the collective.geolocationbehavior package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <plone:behavior
+      title="Geolocatable"
+      description="Makes it possible to mark an item with a geographic location."
+      provides=".geolocation.IGeolocatable"
+      factory=".geolocation.Geolocatable"
+      marker=".geolocation.IGeolocatableMarker"
+      for="plone.dexterity.interfaces.IDexterityContent"
+      />
+      
+  <!-- Maps integration for behavior -->
+  <browser:page
+      for=".geolocation.IGeolocatableMarker"
+      name="maps_googlemaps_view"
+      class="Products.Maps.browser.map.DefaultMapView"
+      permission="zope2.View"
+      allowed_interface="Products.Maps.interfaces.map.IMapView"
+      />
+  <adapter
+      for=".geolocation.IGeolocatableMarker"
+      provides="Products.Maps.interfaces.IMap"
+      factory=".maps.GeolocatableMap"
+      />
+  <adapter
+      for=".geolocation.IGeolocatableMarker"
+      provides="Products.Maps.interfaces.marker.IMarker"
+      factory=".maps.GeolocatableMarker"
+      />
+  
+</configure>

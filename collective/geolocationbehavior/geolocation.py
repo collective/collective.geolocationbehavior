@@ -15,7 +15,7 @@ from collective.geolocationbehavior import _
 
 class IGeolocatable(form.Schema):
     """ Form field for geolocation behavior """
-    geolocation = GeolocationField(title = _(u'Geolocation'))
+    geolocation = GeolocationField(title = _(u'Geolocation'), required=True)
 alsoProvides(IGeolocatable, IFormFieldProvider)
 
 class IGeolocatableMarker(IMapEnabled):

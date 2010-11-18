@@ -1,0 +1,4 @@
+<tal:block tal:condition="python:'collective.geolocationbehavior.geolocation.IGeolocatable' in view.aq_parent.ti.behaviors">
+  <script type="text/javascript" tal:attributes="src string:${context/portal_url}/maps-config.js"></script>
+  <script type="text/javascript" tal:attributes="src string:${context/portal_url}/maps-googlemaps.js"></script>
+</tal:block>

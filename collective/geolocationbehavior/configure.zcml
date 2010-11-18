@@ -31,13 +31,14 @@
       for="plone.dexterity.interfaces.IDexterityContent"
       />
       
-  <!-- Maps integration for behavior -->
-  <browser:page
-      for="Products.CMFCore.interfaces.IFolderish"
-      name="maps_googlemaps_enabled_view"
-      class="Products.Maps.browser.map.DefaultMapView"
+  <browser:viewlet
+      name="collective.geolocationbehavior.js"
+      for="*"
+      view="plone.dexterity.browser.add.DefaultAddView"
+      manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
+      layer=".interfaces.IGeolocationBehaviorLayer"
+      template="scripts.pt"
       permission="zope.Public"
-      allowed_interface="Products.Maps.interfaces.map.IMapEnabledView"
       />
   
   <browser:page
@@ -48,12 +49,6 @@
       allowed_interface="Products.Maps.interfaces.map.IMapView"
       />
 
-  <adapter
-      for="Products.CMFCore.interfaces.IFolderish"
-      provides="Products.Maps.interfaces.IMap"
-      factory=".maps.ContainerMap"
-      />
-            
   <adapter
       for=".geolocation.IGeolocatableMarker"
       provides="Products.Maps.interfaces.IMap"

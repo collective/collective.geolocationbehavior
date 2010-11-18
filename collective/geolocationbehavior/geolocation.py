@@ -17,7 +17,7 @@ class IGeolocatable(form.Schema):
     """ Form field for geolocation behavior """
     geolocation = GeolocationField(title = _(u'Geolocation'),
                                    description = _(u'Click on the map to select a location, '
-                                                   u'or use the text input to search by name.'),
+                                                   u'or use the text input to search by address.'),
                                    required=False)
 alsoProvides(IGeolocatable, IFormFieldProvider)
 

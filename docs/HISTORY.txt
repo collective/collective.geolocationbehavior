@@ -4,7 +4,7 @@ Changelog
 1.1 (2012-09-21)
 ----------------
 
-- Nothing changed yet.
+- Fix egg, add authors
 
 
 1.0 (2012-09-21)

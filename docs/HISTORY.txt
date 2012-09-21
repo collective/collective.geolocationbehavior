@@ -4,7 +4,7 @@ Changelog
 1.2 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- 1.1 was somehow broken again
 
 
 1.1 (2012-09-21)

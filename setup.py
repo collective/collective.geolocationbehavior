@@ -5,7 +5,7 @@ version = '1.0'
 
 setup(name='collective.geolocationbehavior',
       version=version,
-      description="A behavriior which makes it possible to mark and item with a geographic location.",
+      description="A behavior which makes it possible to mark and item with a geographic location.",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from
@@ -15,9 +15,9 @@ setup(name='collective.geolocationbehavior',
         "Programming Language :: Python",
         ],
       keywords='',
-      author='Jesse Snyder',
-      author_email='jesses@npowerseattle.org',
-      url='http://svn.plone.org/svn/collective/',
+      author='Jesse Snyder, davisagli et al',
+      author_email='',
+      url='https://github.com/collective/collective.geolocationbehavior/',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['collective'],
@@ -30,7 +30,7 @@ setup(name='collective.geolocationbehavior',
           'collective.autopermission',
           'plone.app.textfield',
           'plone.formwidget.geolocation',
-          'Products.Maps',        
+          'Products.Maps',
       ],
       entry_points="""
       [z3c.autoinclude.plugin]

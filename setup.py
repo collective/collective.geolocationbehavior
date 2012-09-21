@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.1'
+version = '1.2.dev0'
 
 setup(name='collective.geolocationbehavior',
       version=version,
@@ -16,7 +16,6 @@ setup(name='collective.geolocationbehavior',
         ],
       keywords='',
       author='Jesse Snyder, davisagli et al',
-      author_email='',
       url='https://github.com/collective/collective.geolocationbehavior/',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),

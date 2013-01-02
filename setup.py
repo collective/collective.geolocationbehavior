@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.1.0.3.dev0'
+version = '1.2dev'
 
 setup(name='collective.geolocationbehavior',
       version=version,
@@ -24,11 +24,18 @@ setup(name='collective.geolocationbehavior',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'Plone',
-          'plone.app.dexterity',
-          'collective.autopermission',
-          'plone.app.textfield',
+          # Dependencies for the behavior and form
+          'plone.app.dexterity', # remove this one to get a generic behavior
+          'plone.autoform',
+          'plone.behavior',
           'plone.formwidget.geolocation',
+          'plone.dexterity',
+          # Framework dependencies
+          'zope.annotation',
+          'zope.interface',
+          'zope.component',
+          'persistent',
+          # Exra dependencies
           'Products.Maps',
       ],
       entry_points="""

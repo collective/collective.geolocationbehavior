@@ -4,23 +4,14 @@
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:plone="http://namespaces.plone.org/plone"
-    xmlns:grok="http://namespaces.zope.org/grok"
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="collective.geolocationbehavior">
 
   <!-- Include configuration for dependencies listed in setup.py -->
   <includeDependencies package="." />
-  
-  <!-- Grok the package to initialize schema interfaces and content classes -->
-  <grok:grok package="." />
 
-  <genericsetup:registerProfile
-      name="default"
-      title="collective.geolocationbehavior"
-      directory="profiles/default"
-      description="Installs the collective.geolocationbehavior package"
-      provides="Products.GenericSetup.interfaces.EXTENSION"
-      />
+  <include package="plone.dexterity" />
+  <include package="plone.behavior" file="meta.zcml" />
 
   <plone:behavior
       title="Geolocatable"
@@ -30,7 +21,7 @@
       marker=".geolocation.IGeolocatableMarker"
       for="plone.dexterity.interfaces.IDexterityContent"
       />
-      
+
   <browser:viewlet
       name="collective.geolocationbehavior.js"
       for="*"
@@ -40,7 +31,7 @@
       template="scripts.pt"
       permission="zope.Public"
       />
-  
+
   <browser:page
       for=".geolocation.IGeolocatableMarker"
       name="maps_googlemaps_view"
@@ -48,6 +39,7 @@
       permission="zope2.View"
       allowed_interface="Products.Maps.interfaces.map.IMapView"
       />
+
 
   <adapter
       for=".geolocation.IGeolocatableMarker"
@@ -59,5 +51,14 @@
       provides="Products.Maps.interfaces.marker.IMarker"
       factory=".maps.GeolocatableMarker"
       />
-  
+
+
+  <genericsetup:registerProfile
+      name="default"
+      title="collective.geolocationbehavior"
+      directory="profiles/default"
+      description="Installs the collective.geolocationbehavior package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
 </configure>

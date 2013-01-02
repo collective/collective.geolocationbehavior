@@ -3,17 +3,17 @@ from zope.annotation import factory
 from zope.interface import alsoProvides, implements
 from zope.component import adapts
 
-from plone.directives import form
-from plone.dexterity.interfaces import IDexterityContent
 from plone.autoform.interfaces import IFormFieldProvider
+from plone.dexterity.interfaces import IDexterityContent
 from plone.formwidget.geolocation import GeolocationField
+from plone.supermodel import model
 
 from Products.Maps.interfaces import IMapEnabled
 
 from collective.geolocationbehavior import _
 
 
-class IGeolocatable(form.Schema):
+class IGeolocatable(model.Schema):
     """ Form field for geolocation behavior """
     geolocation = GeolocationField(title = _(u'Geolocation'),
                                    description = _(u'Click on the map to select a location, '

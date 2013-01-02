@@ -30,6 +30,7 @@ setup(name='collective.geolocationbehavior',
           'plone.behavior',
           'plone.formwidget.geolocation',
           'plone.dexterity',
+          'plone.supermodel',
           # Framework dependencies
           'zope.annotation',
           'zope.interface',

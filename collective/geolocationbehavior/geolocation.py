@@ -1,14 +1,12 @@
+from Products.Maps.interfaces import IMapEnabled
 from persistent import Persistent
-from zope.annotation import factory
-from zope.interface import alsoProvides, implements
-from zope.component import adapts
-
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.dexterity.interfaces import IDexterityContent
 from plone.formwidget.geolocation import GeolocationField
 from plone.supermodel import model
-
-from Products.Maps.interfaces import IMapEnabled
+from zope.annotation import factory
+from zope.component import adapts
+from zope.interface import alsoProvides, implements
 
 from collective.geolocationbehavior import _
 

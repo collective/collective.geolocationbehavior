@@ -28,14 +28,14 @@ setup(name='collective.geolocationbehavior',
           'plone.app.dexterity', # remove this one to get a generic behavior
           'plone.autoform',
           'plone.behavior',
-          'plone.formwidget.geolocation',
           'plone.dexterity',
+          'plone.formwidget.geolocation',
           'plone.supermodel',
           # Framework dependencies
-          'zope.annotation',
-          'zope.interface',
-          'zope.component',
           'persistent',
+          'zope.annotation',
+          'zope.component',
+          'zope.interface',
           # Exra dependencies
           'Products.Maps',
       ],

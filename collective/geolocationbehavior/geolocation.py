@@ -12,19 +12,23 @@ from collective.geolocationbehavior import _
 
 
 class IGeolocatable(model.Schema):
-    """ Form field for geolocation behavior """
-    geolocation = GeolocationField(title = _(u'Geolocation'),
-                                   description = _(u'Click on the map to select a location, '
-                                                   u'or use the text input to search by address.'),
-                                   required=False)
+    """Form field for geolocation behavior"""
+    geolocation = GeolocationField(
+        title = _('label_geolocation', default=u'Geolocation'),
+        description = _('help_geolocation',
+                        default=u'Click on the map to select a location, or '
+                                u'use the text input to search by address.'),
+        required=False)
 alsoProvides(IGeolocatable, IFormFieldProvider)
 
+
 class IGeolocatableMarker(IMapEnabled):
-    """ Marker for geolocatable content """
+    """Marker for geolocatable content"""
     pass
 
+
 class GeolocatableAnnotation(Persistent):
-    """ Geolocation storage in annotation """
+    """Geolocation storage in annotation"""
     implements(IGeolocatable)
     adapts(IDexterityContent)
 

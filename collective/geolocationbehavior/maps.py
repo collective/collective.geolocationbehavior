@@ -1,8 +1,8 @@
 from zope.interface import implements
 from zope.component import adapts
 
-from collective.geolocationbehavior.intefaces import IMap
-from collective.geolocationbehavior.intefaces import IMarker
+from collective.geolocationbehavior.interfaces import IMap
+from collective.geolocationbehavior.interfaces import IMarker
 from collective.geolocationbehavior.geolocation import IGeolocatableMarker
 from collective.geolocationbehavior.geolocation import IGeolocatable
 

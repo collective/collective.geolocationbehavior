@@ -4,6 +4,12 @@ Changelog
 1.2dev (unreleased)
 -------------------
 
+- Remove dependency on Products.Maps and copy some of it's interfaces to here.
+  Note, Google Map integration is not available at this point.
+  For mapping functionality I suggest to backport the Leaflet integration from
+  collective.venue.
+  [thet]
+
 - Remove dependency on Grok and use Dexterity 2 way with plone.supermodel to
   define the schema.
   [thet]

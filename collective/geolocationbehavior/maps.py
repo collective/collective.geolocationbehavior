@@ -1,16 +1,19 @@
 from zope.interface import implements
 from zope.component import adapts
 
-from Products.Maps.interfaces import IMarker
-from Products.Maps.adapters import BaseMap
-
+from collective.geolocationbehavior.intefaces import IMap
+from collective.geolocationbehavior.intefaces import IMarker
 from collective.geolocationbehavior.geolocation import IGeolocatableMarker
 from collective.geolocationbehavior.geolocation import IGeolocatable
 
 
-class GeolocatableMap(BaseMap):
+class GeolocatableMap(object):
+    implements(IMap)
     adapts(IGeolocatableMarker)
-    
+
+    def __init__(self, context):
+        self.context = context
+
     def getMarkers(self):
         return GeolocatableMarker(self)
 

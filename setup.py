@@ -25,7 +25,7 @@ setup(name='collective.geolocationbehavior',
       install_requires=[
           'setuptools',
           # Dependencies for the behavior and form
-          'plone.app.dexterity', # remove this one to get a generic behavior
+          'plone.app.dexterity',  # remove this one to get a generic behavior
           'plone.autoform',
           'plone.behavior',
           'plone.dexterity',
@@ -36,8 +36,6 @@ setup(name='collective.geolocationbehavior',
           'zope.annotation',
           'zope.component',
           'zope.interface',
-          # Exra dependencies
-          'Products.Maps',
       ],
       entry_points="""
       [z3c.autoinclude.plugin]

@@ -23,7 +23,7 @@
       for="plone.dexterity.interfaces.IDexterityContent"
       />
 
-  <browser:viewlet
+  <!--browser:viewlet
       name="collective.geolocationbehavior.js"
       for="*"
       view="plone.dexterity.browser.add.DefaultAddView"
@@ -31,25 +31,25 @@
       layer=".interfaces.IGeolocationBehaviorLayer"
       template="scripts.pt"
       permission="zope.Public"
-      />
+      /-->
 
-  <browser:page
+  <!--browser:page
       for=".geolocation.IGeolocatableMarker"
       name="maps_googlemaps_view"
       class="Products.Maps.browser.map.DefaultMapView"
       permission="zope2.View"
       allowed_interface="Products.Maps.interfaces.map.IMapView"
-      />
+      /-->
 
 
   <adapter
       for=".geolocation.IGeolocatableMarker"
-      provides="Products.Maps.interfaces.IMap"
+      provides=".interfaces.IMap"
       factory=".maps.GeolocatableMap"
       />
   <adapter
       for=".geolocation.IGeolocatableMarker"
-      provides="Products.Maps.interfaces.marker.IMarker"
+      provides=".interfaces.IMarker"
       factory=".maps.GeolocatableMarker"
       />
 

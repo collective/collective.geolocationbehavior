@@ -4,6 +4,9 @@ Changelog
 1.2dev (unreleased)
 -------------------
 
+- Add italian translation
+  [gborelli]
+
 - Remove dependency on Products.Maps and copy some of it's interfaces to here.
   Note, Google Map integration is not available at this point.
   For mapping functionality I suggest to backport the Leaflet integration from

@@ -4,7 +4,10 @@ Changelog
 1.3 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Switch to Attribute storage instead of Annotation storage. This is easier to
+  access and needs less ZODB unpickling. It's unlikely that two behaviors share
+  the same geolocation schema name. A upgrade step is provided.
+  [thet]
 
 
 1.2 (2014-04-30)

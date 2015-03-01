@@ -11,13 +11,12 @@
 
   <include package="plone.dexterity" />
   <include package="plone.behavior" file="meta.zcml" />
+  <include package=".upgrades" />
 
   <plone:behavior
       title="Geolocatable"
-      description="Makes it possible to mark an item with a geographic location."
+      description="Add geographic locations to content items."
       provides=".geolocation.IGeolocatable"
-      factory=".geolocation.Geolocatable"
-      marker=".geolocation.IGeolocatableMarker"
       for="plone.dexterity.interfaces.IDexterityContent"
       />
 

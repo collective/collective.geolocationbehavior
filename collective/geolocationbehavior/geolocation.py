@@ -1,3 +1,4 @@
+from collective.geolocationbehavior import _
 from persistent import Persistent
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.dexterity.interfaces import IDexterityContent
@@ -6,8 +7,6 @@ from plone.supermodel import model
 from zope.annotation import factory
 from zope.component import adapts
 from zope.interface import alsoProvides, implements, Interface
-
-from collective.geolocationbehavior import _
 
 
 class IGeolocatable(model.Schema):

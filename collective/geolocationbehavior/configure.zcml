@@ -1,10 +1,8 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
-    xmlns:five="http://namespaces.zope.org/five"
-    xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:plone="http://namespaces.plone.org/plone"
-    xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="collective.geolocationbehavior">
 
   <!-- Include configuration for dependencies listed in setup.py -->
@@ -22,37 +20,6 @@
       marker=".geolocation.IGeolocatableMarker"
       for="plone.dexterity.interfaces.IDexterityContent"
       />
-
-  <!--browser:viewlet
-      name="collective.geolocationbehavior.js"
-      for="*"
-      view="plone.dexterity.browser.add.DefaultAddView"
-      manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
-      layer=".interfaces.IGeolocationBehaviorLayer"
-      template="scripts.pt"
-      permission="zope.Public"
-      /-->
-
-  <!--browser:page
-      for=".geolocation.IGeolocatableMarker"
-      name="maps_googlemaps_view"
-      class="Products.Maps.browser.map.DefaultMapView"
-      permission="zope2.View"
-      allowed_interface="Products.Maps.interfaces.map.IMapView"
-      /-->
-
-
-  <adapter
-      for=".geolocation.IGeolocatableMarker"
-      provides=".interfaces.IMap"
-      factory=".maps.GeolocatableMap"
-      />
-  <adapter
-      for=".geolocation.IGeolocatableMarker"
-      provides=".interfaces.IMarker"
-      factory=".maps.GeolocatableMarker"
-      />
-
 
   <genericsetup:registerProfile
       name="default"

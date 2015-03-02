@@ -1,5 +1,0 @@
-<layers>
-  <layer
-      name="collective.geolocationbehavior" 
-      interface="collective.geolocationbehavior.interfaces.IGeolocationBehaviorLayer" />
-</layers>

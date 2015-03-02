@@ -7,6 +7,7 @@ from zope.component.hooks import getSite
 from zope.event import notify
 from zope.lifecycleevent import ObjectModifiedEvent
 import logging
+from plone.browserlayer.utils import unregister_layer
 
 log = logging.getLogger(__name__)
 
@@ -50,3 +51,7 @@ def upgrade_attribute_storage(context):
         if did_work:
             notify(ObjectModifiedEvent(obj))
         log.debug('Handled object at {0}'.format(obj.absolute_url()))
+
+
+def remove_browserlayer(context):
+    unregister_layer(name=u"collective.geolocationbehavior")

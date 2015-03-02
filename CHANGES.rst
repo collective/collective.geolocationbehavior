@@ -9,6 +9,13 @@ Changelog
   the same geolocation schema name. A upgrade step is provided.
   [thet]
 
+- Removed code related to Google Maps integration. The integration is better
+  done with Mockup Javascript.
+  [thet]
+
+- PEP8.
+  [thet]
+
 
 1.2 (2014-04-30)
 ----------------

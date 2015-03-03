@@ -54,4 +54,8 @@ def upgrade_attribute_storage(context):
 
 
 def remove_browserlayer(context):
-    unregister_layer(name=u"collective.geolocationbehavior")
+    try:
+        unregister_layer(name=u"collective.geolocationbehavior")
+    except KeyError:
+        # No browser layer with name collective.geolocationbehavior registered
+        pass

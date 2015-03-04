@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 
-version = '1.3.dev0'
+version = '1.3'
 
 setup(
     name='collective.geolocationbehavior',

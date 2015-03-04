@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.3 (unreleased)
+1.3 (2015-03-04)
 ----------------
 
 - Remove browserlayer, which isn't needed any more. Includes an Upgrade step.

@@ -1,6 +1,6 @@
 from collective.geolocationbehavior import _
 from plone.autoform.interfaces import IFormFieldProvider
-from plone.formwidget.geolocation.geolocation import GeolocationField
+from plone.formwidget.geolocation.field import GeolocationField
 from plone.supermodel import model
 from zope.interface import alsoProvides
 

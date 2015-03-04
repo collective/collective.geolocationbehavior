@@ -1,10 +1,11 @@
 Changelog
 =========
 
-1.4 (unreleased)
-----------------
 
-- Nothing changed yet.
+1.3.2 (2015-03-04)
+------------------
+
+- Fix the import bug, introduced of previous commit.
 
 
 1.3.1 (2015-03-04)

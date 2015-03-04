@@ -1,10 +1,16 @@
 Changelog
 =========
 
+1.4 (unreleased)
+----------------
+
+- Nothing changed yet.
+
+
 1.3.1 (2015-03-04)
 ------------------
 
-- Nothing changed yet.
+- Fix import of GeolocationField.
 
 
 1.3 (2015-03-04)

@@ -5,7 +5,10 @@ Changelog
 1.4 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Fix upgrade step with broken persistent classes and re-create BBB class
+  definitions for upgrading. Reindex the object while upgrading to get updated
+  object_provides indexes.
+  [thet]
 
 
 1.3.2 (2015-03-04)

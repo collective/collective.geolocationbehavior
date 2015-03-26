@@ -14,3 +14,28 @@ class IGeolocatable(model.Schema):
                               u'use the text input to search by address.'),
         required=False)
 alsoProvides(IGeolocatable, IFormFieldProvider)
+
+
+# BBB for UPGRADE! REMOVE WITH NEXT VERSION
+
+from persistent import Persistent
+from plone.dexterity.interfaces import IDexterityContent
+from zope.annotation import factory
+from zope.component import adapts
+from zope.interface import implements
+from zope.interface import Interface
+
+
+class IGeolocatableMarker(Interface):
+    """Marker for geolocatable content"""
+    pass
+
+
+class GeolocatableAnnotation(Persistent):
+    """Geolocation storage in annotation"""
+    implements(IGeolocatable)
+    adapts(IDexterityContent)
+
+    def __init__(self):
+        self.geolocation = None
+Geolocatable = factory(GeolocatableAnnotation)

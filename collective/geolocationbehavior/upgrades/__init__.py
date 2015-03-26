@@ -12,9 +12,7 @@ from plone.browserlayer.utils import unregister_layer
 log = logging.getLogger(__name__)
 
 
-BEHAVIOR_LIST = [
-    IGeolocatable
-]
+GEO_ANNOTATION_KEY = 'collective.geolocationbehavior.geolocation.GeolocatableAnnotation'
 
 
 def upgrade_attribute_storage(context):
@@ -39,18 +37,18 @@ def upgrade_attribute_storage(context):
                 'skipping.'.format(obj.absolute_url()))
             continue
         annotations = IAnnotations(obj)
-        did_work = False
-        for behavior in BEHAVIOR_LIST:
-            for name in behavior.names():
-                fullname = '{0}.{1}'.format(behavior.__identifier__, name)
-                oldvalue = annotations.get(fullname, None)
-                # Only write the old value if there is no new value yet
-                if oldvalue and not getattr(obj, name, None):
-                    setattr(obj, name, oldvalue)
-                    did_work = True
-        if did_work:
+        oldvalue = annotations.get(GEO_ANNOTATION_KEY, None)
+        geolocation = getattr(oldvalue, 'geolocation', None)
+        if geolocation and not IGeolocatable(obj).geolocation:
+            # Only write the old value if there is no new value yet
+            IGeolocatable(obj).geolocation = geolocation
             notify(ObjectModifiedEvent(obj))
-        log.debug('Handled object at {0}'.format(obj.absolute_url()))
+            log.info('Set geolocation lat: {0}, lng: {1} for {2}'.format(
+                geolocation.latitude,
+                geolocation.longitude,
+                obj.absolute_url())
+            )
+        obj.reindexObject()  # reindex - old IGeolocatableMarker doesn't exist anymore  # noqa
 
 
 def remove_browserlayer(context):

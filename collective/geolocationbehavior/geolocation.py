@@ -2,7 +2,7 @@ from collective.geolocationbehavior import _
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.formwidget.geolocation.field import GeolocationField
 from plone.supermodel import model
-from zope.interface import alsoProvides
+from zope.interface import alsoProvides, Interface
 
 
 class IGeolocatable(model.Schema):
@@ -14,6 +14,16 @@ class IGeolocatable(model.Schema):
                               u'use the text input to search by address.'),
         required=False)
 alsoProvides(IGeolocatable, IFormFieldProvider)
+
+
+# factory which returns geolocation for Products.Maps as an IGeolocation
+def get_geolocation(context):
+    return context.geolocation
+
+
+class IMappableMarker(Interface):
+    """Marker interface for integration with mapping packages"""
+    pass
 
 
 # BBB for UPGRADE! REMOVE WITH NEXT VERSION

@@ -3,6 +3,8 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="collective.geolocationbehavior">
 
   <!-- Include configuration for dependencies listed in setup.py -->
@@ -27,5 +29,43 @@
       description="Installs the collective.geolocationbehavior package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
+
+  <!-- If Products.Maps is installed, use it to provide maps for types with this behavior -->
+  <configure zcml:condition="installed Products.Maps">
+    <adapter
+        for=".geolocation.IMappableMarker"
+        provides="Products.Maps.interfaces.IMap"
+        factory="Products.Maps.adapters.ContextMap"
+        />
+    <adapter 
+        for=".geolocation.IMappableMarker"
+        provides="Products.Maps.interfaces.IGeoLocation"
+        factory=".geolocation.get_geolocation" />
+    
+    <configure package="Products.Maps.browser">
+      <browser:page
+          for="collective.geolocationbehavior.geolocation.IMappableMarker"
+          name="maps_googlemaps_enabled_view"
+          class=".map.DefaultMapView"
+          permission="zope.Public"
+          allowed_interface="..interfaces.map.IMapEnabledView"
+          />
+      <browser:page
+          for="collective.geolocationbehavior.geolocation.IMappableMarker"
+          name="maps_map"
+          template="maps_map.pt"
+          permission="zope2.View"
+          />
+      <browser:page
+          for="collective.geolocationbehavior.geolocation.IMappableMarker"
+          name="maps_googlemaps_view"
+          class=".map.DefaultMapView"
+          permission="zope2.View"
+          allowed_interface="..interfaces.map.IMapView"
+          />
+    </configure>
+
+
+  </configure>
 
 </configure>

@@ -5,6 +5,10 @@ Changelog
 1.4 (unreleased)
 ----------------
 
+- Install the plone.formwidget.geolocation default profile in order to get
+  Leaflet map support.
+  [thet]
+
 - Fix upgrade step with broken persistent classes and re-create BBB class
   definitions for upgrading. Reindex the object while upgrading to get updated
   object_provides indexes.

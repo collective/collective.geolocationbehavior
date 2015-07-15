@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.4 (unreleased)
+1.4 (2015-07-15)
 ----------------
 
 - Install the plone.formwidget.geolocation default profile in order to get

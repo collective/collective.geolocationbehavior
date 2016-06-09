@@ -5,7 +5,8 @@ Changelog
 1.5 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Code cleanup, remove BBB classes.
+  [thet]
 
 
 1.4 (2015-07-15)

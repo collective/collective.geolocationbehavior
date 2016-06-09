@@ -12,7 +12,7 @@ from plone.browserlayer.utils import unregister_layer
 log = logging.getLogger(__name__)
 
 
-GEO_ANNOTATION_KEY = 'collective.geolocationbehavior.geolocation.GeolocatableAnnotation'
+GEO_ANNOTATION_KEY = 'collective.geolocationbehavior.geolocation.GeolocatableAnnotation'  # noqa
 
 
 def upgrade_attribute_storage(context):
@@ -48,6 +48,8 @@ def upgrade_attribute_storage(context):
                 geolocation.longitude,
                 obj.absolute_url())
             )
+        if oldvalue:
+            del annotations[GEO_ANNOTATION_KEY]
         obj.reindexObject()  # reindex - old IGeolocatableMarker doesn't exist anymore  # noqa
 
 

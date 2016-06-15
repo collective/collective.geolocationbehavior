@@ -5,6 +5,9 @@ Changelog
 1.5 (unreleased)
 ----------------
 
+- Register the ``collective.geolocationbehavior.geolocation.IGeolocatable`` behavior under the name ``geolocatable``.
+  [thet]
+
 - Code cleanup, remove BBB classes.
   [thet]
 

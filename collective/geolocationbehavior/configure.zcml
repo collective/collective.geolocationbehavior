@@ -13,6 +13,7 @@
   <include package=".upgrades" />
 
   <plone:behavior
+      name="geolocatable"
       title="Geolocatable"
       description="Add geographic locations to content items."
       provides=".geolocation.IGeolocatable"

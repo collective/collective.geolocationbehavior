@@ -17,7 +17,6 @@
       title="Geolocatable"
       description="Add geographic locations to content items."
       provides=".geolocation.IGeolocatable"
-      for="plone.dexterity.interfaces.IDexterityContent"
       />
 
   <genericsetup:registerProfile

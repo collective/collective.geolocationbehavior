@@ -6,7 +6,8 @@ Changelog
 ----------------
 
 - Register the ``collective.geolocationbehavior.geolocation.IGeolocatable`` behavior under the name ``geolocatable``.
-  [thet]
+  Do not bind ``for`` because its superfluos.
+  [thet, jensens]
 
 - Code cleanup, remove BBB classes.
   [thet]

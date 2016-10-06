@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.5 (unreleased)
+1.5 (2016-10-06)
 ----------------
 
 - Register the ``collective.geolocationbehavior.geolocation.IGeolocatable`` behavior under the name ``geolocatable``.

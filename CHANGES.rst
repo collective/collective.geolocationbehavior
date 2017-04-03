@@ -5,7 +5,9 @@ Changelog
 1.6 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Explicitly include necessary zcml dependencies to avoid having to explictly doing that in tests.
+  plone.app.testing disables z3c.autoinclude.
+  [thet]
 
 
 1.5 (2016-10-06)

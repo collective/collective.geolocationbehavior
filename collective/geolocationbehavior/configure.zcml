@@ -5,10 +5,11 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="collective.geolocationbehavior">
 
-  <!-- Include configuration for dependencies listed in setup.py -->
-  <includeDependencies package="." />
   <i18n:registerTranslations directory="locales" />
 
+  <!-- Include configuration for dependencies listed in setup.py -->
+  <includeDependencies package="." />
+  <include package="plone.formwidget.geolocation"/>
   <include package="plone.behavior" file="meta.zcml" />
   <include package=".upgrades" />
 

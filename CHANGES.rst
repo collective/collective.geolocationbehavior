@@ -5,7 +5,8 @@ Changelog
 1.5.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add uninstall profile
+  [petschki]
 
 
 1.5.1 (2017-04-04)

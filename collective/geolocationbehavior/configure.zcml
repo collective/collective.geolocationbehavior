@@ -28,4 +28,12 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="collective.geolocationbehavior uninstall"
+      directory="profiles/uninstall"
+      description="Installs the collective.geolocationbehavior package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
 </configure>

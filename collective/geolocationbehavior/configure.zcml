@@ -20,6 +20,8 @@
       provides=".geolocation.IGeolocatable"
       />
 
+  <adapter factory=".geolocation.GeoJSONProperties" />
+
   <genericsetup:registerProfile
       name="default"
       title="collective.geolocationbehavior"

@@ -2,10 +2,19 @@ Changelog
 =========
 
 
-1.5.2 (unreleased)
+1.6.0 (unreleased)
 ------------------
 
+- add ``IGeoJSONProperties`` adapter
+  [petschki]
+
+- add latitude/longitude indexer
+  [petschki]
+
 - Add uninstall profile
+  [petschki]
+
+- prepare testing environment
   [petschki]
 
 

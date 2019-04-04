@@ -22,6 +22,16 @@
 
   <adapter factory=".geolocation.GeoJSONProperties" />
 
+  <!-- indexer -->
+  <adapter
+      name="latitude"
+      factory=".indexer.latitude"
+      />
+  <adapter
+      name="longitude"
+      factory=".indexer.longitude"
+      />
+
   <genericsetup:registerProfile
       name="default"
       title="collective.geolocationbehavior"

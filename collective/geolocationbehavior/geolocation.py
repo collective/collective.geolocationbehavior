@@ -5,6 +5,7 @@ from plone.autoform.interfaces import IFormFieldProvider
 from plone.formwidget.geolocation.field import GeolocationField
 from plone.supermodel import model
 from zope.component import adapter
+from zope.interface import Interface
 from zope.interface import implementer
 from zope.interface import provider
 
@@ -20,7 +21,7 @@ class IGeolocatable(model.Schema):
         required=False)
 
 
-@adapter(IGeolocatable)
+@adapter(Interface)
 @implementer(IGeoJSONProperties)
 class GeoJSONProperties(object):
 
@@ -36,3 +37,7 @@ class GeoJSONProperties(object):
             self.context.Title(),
             self.context.Description(),
         )
+
+    @property
+    def color(self):
+        return 'green'

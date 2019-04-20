@@ -4,9 +4,10 @@ from collective.geolocationbehavior.interfaces import IGeoJSONProperties
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.formwidget.geolocation.field import GeolocationField
 from plone.supermodel import model
+from plone.uuid.interfaces import IUUID
 from zope.component import adapter
-from zope.interface import Interface
 from zope.interface import implementer
+from zope.interface import Interface
 from zope.interface import provider
 
 
@@ -41,3 +42,7 @@ class GeoJSONProperties(object):
     @property
     def color(self):
         return 'green'
+
+    @property
+    def extraClasses(self):
+        return 'uuid-{0}'.format(IUUID(self.context))

@@ -5,16 +5,16 @@ Changelog
 1.6.0 (unreleased)
 ------------------
 
-- add ``IGeoJSONProperties`` adapter
+- Add ``IGeoJSONProperties`` adapter.
   [petschki]
 
-- add latitude/longitude indexer
+- Add latitude/longitude indexer.
   [petschki]
 
-- Add uninstall profile
+- Add uninstall profile.
   [petschki]
 
-- prepare testing environment
+- Prepare testing environment.
   [petschki]
 
 

@@ -18,5 +18,13 @@
       profile="collective.geolocationbehavior:default"
       handler=".remove_browserlayer"
       />
+  <genericsetup:upgradeDepends
+      source="4"
+      destination="5"
+      title="Add catalog indexer"
+      description=""
+      profile="collective.geolocationbehavior:default"
+      import_steps="catalog"
+      />
 
 </configure>

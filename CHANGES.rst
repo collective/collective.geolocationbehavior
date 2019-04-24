@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.6.0 (unreleased)
+1.6.0 (2019-04-24)
 ------------------
 
 - Add ``IGeoJSONProperties`` adapter.

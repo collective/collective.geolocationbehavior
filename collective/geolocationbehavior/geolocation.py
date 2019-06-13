@@ -9,6 +9,15 @@ from zope.component import adapter
 from zope.interface import implementer
 from zope.interface import Interface
 from zope.interface import provider
+import pkg_resources
+try:
+    pkg_resources.get_distribution('plone.app.multilingual')
+except pkg_resources.DistributionNotFound:
+    HAS_PAM = False
+else:
+    from zope.interface import alsoProvides
+    from plone.app.multilingual.dx.interfaces import ILanguageIndependentField
+    HAS_PAM = True
 
 
 @provider(IFormFieldProvider)
@@ -20,6 +29,9 @@ class IGeolocatable(model.Schema):
                       default=u'Click on the map to select a location, or '
                               u'use the text input to search by address.'),
         required=False)
+
+if HAS_PAM:
+    alsoProvides(IGeolocatable['geolocation'], ILanguageIndependentField)
 
 
 @adapter(Interface)

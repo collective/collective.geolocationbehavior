@@ -2,10 +2,11 @@ Changelog
 =========
 
 
-1.6.1 (unreleased)
+1.7.0 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Make geolocation language independent
+  [agitator]
 
 
 1.6.0 (2019-04-24)

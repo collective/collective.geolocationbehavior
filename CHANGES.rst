@@ -5,7 +5,8 @@ Changelog
 1.7.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Do not use autoinclude for ZCML, load explicit.
+  [jensens]
 
 
 1.7.0 (2019-12-09)

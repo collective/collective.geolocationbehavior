@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.7.1 (unreleased)
+1.7.1 (2020-07-10)
 ------------------
 
 - Do not use autoinclude for ZCML, load explicit.

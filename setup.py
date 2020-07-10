@@ -2,7 +2,7 @@
 from setuptools import setup, find_packages
 
 
-version = '1.7.1'
+version = '1.7.2.dev0'
 
 setup(
     name='collective.geolocationbehavior',

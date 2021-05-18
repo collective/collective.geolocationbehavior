@@ -5,7 +5,8 @@ Changelog
 1.7.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add French translation
+  [laulaz]
 
 
 1.7.1 (2020-07-10)

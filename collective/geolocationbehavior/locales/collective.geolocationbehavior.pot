@@ -17,8 +17,12 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.geolocationbehavior\n"
 
+#. Default: "Geolocation"
+#: collective/geolocationbehavior/geolocation.py:27
 msgid "label_geolocation"
 msgstr ""
 
+#. Default: "Click on the map to select a location, or use the text input to search by address."
+#: collective/geolocationbehavior/geolocation.py:28
 msgid "help_geolocation"
 msgstr ""

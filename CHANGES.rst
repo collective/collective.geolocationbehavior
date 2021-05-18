@@ -5,6 +5,9 @@ Changelog
 1.7.2 (unreleased)
 ------------------
 
+- Fix Italian .po file location
+  [laulaz]
+
 - Add French translation
   [laulaz]
 

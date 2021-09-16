@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.7.2 (unreleased)
+1.7.2 (2021-09-16)
 ------------------
 
 - Fix Italian .po file location

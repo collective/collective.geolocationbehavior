@@ -1,6 +1,8 @@
 Introduction
 ============
 
+Plone 6
+
 Dexterity based behaviors for geotagging.
 
 Implements plone.formwidget.geolocation which adds LeafletJS support.

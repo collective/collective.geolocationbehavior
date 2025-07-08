@@ -5,6 +5,9 @@ Changelog
 1.7.3 (unreleased)
 ------------------
 
+- Add new translation strings
+  [macagua]
+
 - Fixed some errors from code-analysis scripts
   [macagua]
 

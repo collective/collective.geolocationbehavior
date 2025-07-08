@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-06-19 10:47+0000\n"
+"POT-Creation-Date: 2025-07-08 09:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,12 +17,32 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.geolocationbehavior\n"
 
-#. Default: "Geolocation"
-#: collective/geolocationbehavior/geolocation.py:27
-msgid "label_geolocation"
-msgstr "Geographische Verortung"
+#: collective/geolocationbehavior/configure.zcml:19
+msgid "Add geographic locations to content items."
+msgstr ""
+
+#: collective/geolocationbehavior/configure.zcml:19
+msgid "Geolocatable"
+msgstr ""
+
+#: collective/geolocationbehavior/configure.zcml:39
+msgid "Installs the collective.geolocationbehavior package"
+msgstr ""
+
+#: collective/geolocationbehavior/configure.zcml:39
+msgid "collective.geolocationbehavior"
+msgstr ""
+
+#: collective/geolocationbehavior/configure.zcml:47
+msgid "collective.geolocationbehavior uninstall"
+msgstr ""
 
 #. Default: "Click on the map to select a location, or use the text input to search by address."
-#: collective/geolocationbehavior/geolocation.py:28
+#: collective/geolocationbehavior/geolocation.py:27
 msgid "help_geolocation"
 msgstr "Klicken Sie auf die Karte, um einen Ort auszuwählen oder Suchen sie im Suchfeld danach."
+
+#. Default: "Geolocation"
+#: collective/geolocationbehavior/geolocation.py:26
+msgid "label_geolocation"
+msgstr "Geographische Verortung"

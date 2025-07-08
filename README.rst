@@ -23,7 +23,7 @@ click on the ``Behaviors`` tab, there you can see the new behavior called ``geol
 .. figure:: https://raw.githubusercontent.com/collective/collective.geolocationbehavior/refs/heads/master/docs/images/geolocatable.png
    :align: center
    :height: 77px
-   :width: 87px
+   :width: 876px
    :alt: The geolocatable Behavior
 
    The geolocatable Behavior.

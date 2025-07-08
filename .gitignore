@@ -1,4 +1,23 @@
+# Buildout
 *.pyc
-*.egg-info
+*.pyo
+*.tmp*
 *.mo
-dist
+*.egg
+*.EGG
+*.egg-info
+*.EGG-INFO
+.*.cfg
+bin/
+build/
+develop-eggs/
+downloads/
+eggs/
+fake-eggs/
+parts/
+dist/
+var/
+venv/
+
+# Visual Code
+*.code-workspace

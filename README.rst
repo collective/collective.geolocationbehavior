@@ -14,6 +14,21 @@ Features
 - The GeoJSON properties can be customized with the provided ``IGeoJSONProperties`` adapter.
 
 
+Screenshots
+===========
+
+After installation, you will find a new behavior avalaible, go to ``Site Setup`` > ``Content Types`` there select a content type and
+click on the ``Behaviors`` tab, there you can see the new behavior called ``geolocatable`` as the following screenshot:
+
+.. figure:: https://raw.githubusercontent.com/collective/collective.geolocationbehavior/refs/heads/master/docs/images/geolocatable.png
+   :align: center
+   :height: 77px
+   :width: 87px
+   :alt: The geolocatable Behavior
+
+   The geolocatable Behavior.
+
+
 Examples
 ========
 
@@ -51,8 +66,6 @@ Install ``collective.geolocationbehavior`` by adding it to your buildout:
 
 
 and then running "bin/buildout".
-
-After installation, you will find a new item in your site control panel where to set various options.
 
 
 Contribute

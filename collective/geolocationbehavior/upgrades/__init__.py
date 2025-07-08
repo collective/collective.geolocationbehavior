@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from Products.CMFCore.utils import getToolByName
 from collective.geolocationbehavior.geolocation import IGeolocatable
 from zope.annotation.interfaces import IAnnotatable
@@ -26,7 +25,7 @@ def upgrade_attribute_storage(context):
     for result in results:
         try:
             obj = result.getObject()
-        except:
+        except Exception:
             log.warning(
                 'Not possible to fetch object from catalog result for '
                 'item: {0}.'.format(result.getPath()))

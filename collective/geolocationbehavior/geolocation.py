@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from collective.geolocationbehavior import _
 from collective.geolocationbehavior.interfaces import IGeoJSONProperties
 from plone.autoform.interfaces import IFormFieldProvider
@@ -29,6 +28,7 @@ class IGeolocatable(model.Schema):
                       default=u'Click on the map to select a location, or '
                               u'use the text input to search by address.'),
         required=False)
+
 
 if HAS_PAM:
     alsoProvides(IGeolocatable['geolocation'], ILanguageIndependentField)

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from collective.geolocationbehavior.geolocation import IGeolocatable
 from plone.indexer.decorator import indexer
 

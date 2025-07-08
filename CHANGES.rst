@@ -5,7 +5,8 @@ Changelog
 1.7.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fixed some errors from code-analysis scripts
+  [macagua]
 
 
 1.7.2 (2021-09-16)

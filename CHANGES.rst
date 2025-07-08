@@ -5,6 +5,9 @@ Changelog
 1.7.3 (unreleased)
 ------------------
 
+- Add Spanish translation
+  [macagua]
+
 - Add new translation strings
   [macagua]
 

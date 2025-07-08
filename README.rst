@@ -65,7 +65,7 @@ Contribute
 Support
 =======
 
-If you are having issues, please let us know at our `Issue Tracker <https://github.com/collective/collective.geolocationbehavior/issues>`_.
+If you are having issues, please let us know at our `issue tracker <https://github.com/collective/collective.geolocationbehavior/issues>`_.
 
 
 License

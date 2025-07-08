@@ -1,9 +1,9 @@
 Introduction
 ============
 
-Dexterity based behaviors for geotagging.
+Dexterity based behaviors for Geotagging.
 
-Implements plone.formwidget.geolocation which adds LeafletJS support.
+Implements `plone.formwidget.geolocation <https://github.com/collective/plone.formwidget.geolocation>`_ which adds `LeafletJS <https://leafletjs.com/>`_ support.
 
 Adds catalog indexes/metadata for latitude/longitude to support
 GeoJSON Featurelist output/filtering.

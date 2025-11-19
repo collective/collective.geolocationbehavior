@@ -21,3 +21,6 @@ venv/
 
 # Visual Code
 *.code-workspace
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore

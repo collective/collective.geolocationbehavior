@@ -67,7 +67,7 @@ Changelog
 1.5.1 (2017-04-04)
 ------------------
 
-- Explicitely include necessary zcml dependencies to avoid having to explictly doing that in tests.
+- Explicitly include necessary zcml dependencies to avoid having to explicitly doing that in tests.
   plone.app.testing disables z3c.autoinclude.
   [thet]
 

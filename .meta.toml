@@ -2,7 +2,8 @@
 # https://github.com/plone/meta/tree/main/src/plone/meta/default
 # See the inline comments on how to expand/tweak this configuration file
 [tox]
-test_matrix = {"6.1" = ["*"], "6.0" = ["*"]}
+test_matrix = { "6.1" = ["*"], "6.0" = ["*"] }
+skip_test_extra = true
 
 [meta]
 template = "default"

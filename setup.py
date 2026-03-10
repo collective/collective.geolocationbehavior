@@ -24,10 +24,12 @@ setup(
     ],
     keywords="plone dexterity behavior geographic locations contents",
     author="Jesse Snyder, davisagli et al",
+    author_email="collective@plone.org",
     url="https://github.com/collective/collective.geolocationbehavior/",
     license="GPL",
     include_package_data=True,
     zip_safe=False,
+    python_requires=">=3.10",
     install_requires=[
         # Dependencies for the behavior and form
         "plone.app.dexterity",  # remove this one to get a generic behavior

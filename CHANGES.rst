@@ -2,8 +2,17 @@ Changelog
 =========
 
 
-1.7.3 (unreleased)
+3.0.0 (unreleased)
 ------------------
+
+- Breaking: Plone 6.2 only
+  [erral]
+
+- src-layout, native-namespaces
+  [erral]
+
+- configure with plone.meta
+  [erral]
 
 - Add Spanish translation
   [macagua]

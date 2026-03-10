@@ -67,7 +67,7 @@ Changelog
 1.5.1 (2017-04-04)
 ------------------
 
-- Explicitly include necessary zcml dependencies to avoid having to explictly doing that in tests.
+- Explicitely include necessary zcml dependencies to avoid having to explictly doing that in tests.
   plone.app.testing disables z3c.autoinclude.
   [thet]
 
@@ -76,7 +76,7 @@ Changelog
 ----------------
 
 - Register the ``collective.geolocationbehavior.geolocation.IGeolocatable`` behavior under the name ``geolocatable``.
-  Do not bind ``for`` because its superfluos.
+  Do not bind ``for`` because its superfluous.
   [thet, jensens]
 
 - Code cleanup, remove BBB classes.

@@ -25,7 +25,7 @@ def upgrade_attribute_storage(context):
         "collective.geolocationbehavior.geolocation.IGeolocatableMarker"  # noqa
     )
     results = catalog(**query)
-    log.info("There are {} in total, stating migration...".format(len(results)))
+    log.info(f"There are {len(results)} in total, stating migration...")
     for result in results:
         try:
             obj = result.getObject()

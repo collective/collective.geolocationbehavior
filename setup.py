@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 
 version = "3.0.0.dev0"
@@ -34,13 +34,20 @@ setup(
         "plone.app.dexterity",  # remove this one to get a generic behavior
         "plone.autoform",
         "plone.behavior",
-        "plone.dexterity",
         "plone.formwidget.geolocation",
         "plone.supermodel",
         # Framework dependencies
         "zope.annotation",
         "zope.component",
         "zope.interface",
+        "Products.CMFCore",
+        "Products.GenericSetup",
+        "plone.browserlayer",
+        "plone.indexer",
+        "plone.uuid",
+        "zope.i18nmessageid",
+        "zope.lifecycleevent",
+        "zope.event",
     ],
     entry_points="""
       [z3c.autoinclude.plugin]

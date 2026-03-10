@@ -27,12 +27,9 @@ setup(
     author="Jesse Snyder, davisagli et al",
     url="https://github.com/collective/collective.geolocationbehavior/",
     license="GPL",
-    packages=find_packages(exclude=["ez_setup"]),
-    namespace_packages=["collective"],
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        "setuptools",
         # Dependencies for the behavior and form
         "plone.app.dexterity",  # remove this one to get a generic behavior
         "plone.autoform",

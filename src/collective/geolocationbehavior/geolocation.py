@@ -8,44 +8,51 @@ from zope.component import adapter
 from zope.interface import implementer
 from zope.interface import Interface
 from zope.interface import provider
+
 import pkg_resources
+
 try:
-    pkg_resources.get_distribution('plone.app.multilingual')
+    pkg_resources.get_distribution("plone.app.multilingual")
 except pkg_resources.DistributionNotFound:
     HAS_PAM = False
 else:
-    from zope.interface import alsoProvides
     from plone.app.multilingual.dx.interfaces import ILanguageIndependentField
+    from zope.interface import alsoProvides
+
     HAS_PAM = True
 
 
 @provider(IFormFieldProvider)
 class IGeolocatable(model.Schema):
     """Form field for geolocation behavior"""
+
     geolocation = GeolocationField(
-        title=_('label_geolocation', default=u'Geolocation'),
-        description=_('help_geolocation',
-                      default=u'Click on the map to select a location, or '
-                              u'use the text input to search by address.'),
-        required=False)
+        title=_("label_geolocation", default="Geolocation"),
+        description=_(
+            "help_geolocation",
+            default="Click on the map to select a location, or "
+            "use the text input to search by address.",
+        ),
+        required=False,
+    )
 
 
 if HAS_PAM:
-    alsoProvides(IGeolocatable['geolocation'], ILanguageIndependentField)
+    alsoProvides(IGeolocatable["geolocation"], ILanguageIndependentField)
 
 
 @adapter(Interface)
 @implementer(IGeoJSONProperties)
-class GeoJSONProperties(object):
+class GeoJSONProperties:
 
     def __init__(self, context):
         self.context = context
 
     @property
     def popup(self):
-        return u"""
-<header><a href="{0}">{1}</a></header>
-<p>{2}</p>""".format(
+        return """
+<header><a href="{}">{}</a></header>
+<p>{}</p>""".format(
             self.context.absolute_url(),
             self.context.Title(),
             self.context.Description(),
@@ -53,8 +60,8 @@ class GeoJSONProperties(object):
 
     @property
     def color(self):
-        return 'green'
+        return "green"
 
     @property
     def extraClasses(self):
-        return 'uuid-{0}'.format(IUUID(self.context))
+        return f"uuid-{IUUID(self.context)}"

@@ -1,13 +1,12 @@
 from setuptools import setup
 
-
 version = "3.0.0.dev0"
 
 setup(
     name="collective.geolocationbehavior",
     version=version,
     description="Dexterity behavior to add geographic locations to contents.",
-    long_description="{0}\n{1}".format(
+    long_description="{}\n{}".format(
         open("README.rst").read(), open("CHANGES.rst").read()
     ),
     classifiers=[

@@ -1,29 +1,30 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
-    xmlns:genericsetup="http://namespaces.zope.org/genericsetup">
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    >
 
   <genericsetup:upgradeStep
-      source="2"
-      destination="3"
       title="Attribute storage"
       description="Migrate fields from annotation storage to attribute storage."
       profile="collective.geolocationbehavior:default"
+      source="2"
+      destination="3"
       handler=".upgrade_attribute_storage"
       />
   <genericsetup:upgradeStep
-      source="2"
-      destination="3"
       title="Remove Browserlayer"
       description="Remove the browserlayer, which is not needed anymore."
       profile="collective.geolocationbehavior:default"
+      source="2"
+      destination="3"
       handler=".remove_browserlayer"
       />
   <genericsetup:upgradeDepends
-      source="4"
-      destination="5"
       title="Add catalog indexer"
       description=""
       profile="collective.geolocationbehavior:default"
+      source="4"
+      destination="5"
       import_steps="catalog"
       />
 

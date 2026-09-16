@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-07-08 09:57+0000\n"
+"POT-Creation-Date: 2026-09-16 08:25+0000\n"
 "PO-Revision-Date: 2021-05-18 12:41+0000nLast-Translator: Laurent Lasudry <laurent.lasudry@affinitic.be>\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,23 +19,23 @@ msgstr ""
 "Language: fr\n"
 "X-Is-Fallback-For: fr-be fr-ca fr-lu fr-mc fr-ch fr-fr\n"
 
-#: collective/geolocationbehavior/configure.zcml:19
+#: collective/geolocationbehavior/configure.zcml:23
 msgid "Add geographic locations to content items."
 msgstr ""
 
-#: collective/geolocationbehavior/configure.zcml:19
+#: collective/geolocationbehavior/configure.zcml:23
 msgid "Geolocatable"
 msgstr ""
 
-#: collective/geolocationbehavior/configure.zcml:39
+#: collective/geolocationbehavior/configure.zcml:43
 msgid "Installs the collective.geolocationbehavior package"
 msgstr ""
 
-#: collective/geolocationbehavior/configure.zcml:39
+#: collective/geolocationbehavior/configure.zcml:43
 msgid "collective.geolocationbehavior"
 msgstr ""
 
-#: collective/geolocationbehavior/configure.zcml:47
+#: collective/geolocationbehavior/configure.zcml:51
 msgid "collective.geolocationbehavior uninstall"
 msgstr ""
 

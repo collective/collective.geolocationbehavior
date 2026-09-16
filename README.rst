@@ -60,6 +60,19 @@ This product has been translated into:
 - Spanish
 
 
+Compatibility
+=============
+
+Version 3.x supports Plone 6.1 and 6.2 on Python 3.10 to 3.14 and is a
+`PEP 420 <https://peps.python.org/pep-0420/>`_ native namespace package.
+Do not mix it with ``collective.*`` packages that still declare the namespace
+via ``pkg_resources``; in such environments (for example Plone 6.1 buildouts
+with older add-ons) install `horse-with-no-namespace
+<https://pypi.org/project/horse-with-no-namespace/>`_.
+
+For Plone 5.2 and 6.0 use the 1.7.x releases.
+
+
 Installation
 ============
 

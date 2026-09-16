@@ -146,7 +146,9 @@ If you are having issues, please let us know at our `issue tracker <https://gith
 License
 =======
 
-The project is licensed under the `GPLv2 <https://raw.githubusercontent.com/collective/collective.geolocationbehavior/refs/heads/master/LICENSE.GPL>`_.
+The project is licensed under the GNU General Public License, version 2 or
+(at your option) any later version (``GPL-2.0-or-later``), see ``LICENSE.txt`` and
+`LICENSE.GPL <https://raw.githubusercontent.com/collective/collective.geolocationbehavior/refs/heads/master/LICENSE.GPL>`_.
 
 .. _Cookieplone: https://github.com/plone/cookieplone
 .. _buildout: https://6.docs.plone.org/admin-guide/add-ons.html#buildout

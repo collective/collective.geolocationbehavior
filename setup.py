@@ -28,7 +28,7 @@ setup(
     author="Jesse Snyder, davisagli et al",
     author_email="collective@plone.org",
     url="https://github.com/collective/collective.geolocationbehavior/",
-    license="GPL-2.0-only",
+    license="GPL-2.0-or-later",
     include_package_data=True,
     zip_safe=False,
     python_requires=">=3.10",

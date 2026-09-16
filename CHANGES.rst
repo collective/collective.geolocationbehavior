@@ -42,11 +42,14 @@ Internal:
   with ``importlib`` (setuptools 81+ warns about ``pkg_resources``).
   [petschki]
 
-- Use an SPDX license expression instead of the deprecated license classifier.
+- Use the SPDX license expression ``GPL-2.0-or-later`` (matching the
+  license grant in ``LICENSE.txt``) instead of the deprecated license
+  classifier; ``LICENSE.txt`` moved to the package root next to
+  ``LICENSE.GPL``.
   [petschki]
 
-- Remove the obsolete ``buildout.cfg``, ``docs/INSTALL.txt`` and duplicate
-  license files; fix ``build-i18n.sh`` for the ``src/`` layout.
+- Remove the obsolete ``buildout.cfg`` and ``docs/INSTALL.txt``; fix
+  ``build-i18n.sh`` for the ``src/`` layout.
   [petschki]
 
 - Fixed some errors from code-analysis scripts.

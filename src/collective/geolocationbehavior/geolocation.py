@@ -1,5 +1,6 @@
 from collective.geolocationbehavior import _
 from collective.geolocationbehavior.interfaces import IGeoJSONProperties
+from importlib.metadata import PackageNotFoundError, version
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.formwidget.geolocation.field import GeolocationField
 from plone.supermodel import model
@@ -9,11 +10,9 @@ from zope.interface import implementer
 from zope.interface import Interface
 from zope.interface import provider
 
-import pkg_resources
-
 try:
-    pkg_resources.get_distribution("plone.app.multilingual")
-except pkg_resources.DistributionNotFound:
+    version("plone.app.multilingual")
+except PackageNotFoundError:
     HAS_PAM = False
 else:
     from plone.app.multilingual.dx.interfaces import ILanguageIndependentField

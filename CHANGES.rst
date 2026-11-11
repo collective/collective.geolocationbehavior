@@ -1,6 +1,11 @@
 Changelog
 =========
 
+3.0.1 (unreleased)
+------------------
+- Replace pkg_resources and replace with importlib (#18)
+  [holdenhao]
+
 
 3.0.0 (unreleased)
 ------------------

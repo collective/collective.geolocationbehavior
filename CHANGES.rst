@@ -2,27 +2,7 @@ Changelog
 =========
 
 
-3.0.0 (unreleased)
-------------------
-
-- Breaking: Plone 6.2 only
-  [erral]
-
-- src-layout, native-namespaces
-  [erral]
-
-- configure with plone.meta
-  [erral]
-
-- Add Spanish translation
-  [macagua]
-
-- Add new translation strings
-  [macagua]
-
-- Fixed some errors from code-analysis scripts
-  [macagua]
-
+.. towncrier release notes start
 
 1.7.2 (2021-09-16)
 ------------------

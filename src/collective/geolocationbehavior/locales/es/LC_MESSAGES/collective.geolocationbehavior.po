@@ -3,11 +3,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.geolocationbehavior\n"
-"POT-Creation-Date: 2025-07-08 09:57+0000\n"
+"POT-Creation-Date: 2026-09-16 08:25+0000\n"
 "PO-Revision-Date: 2025-07-08 11:59+0200\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
 "Language-Team: ES <LL@li.org>\n"
-"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,26 +15,27 @@ msgstr ""
 "Language-Name: Español\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.geolocationbehavior\n"
+"Language: es\n"
 "X-Is-Fallback-For: es-ar es-bo es-cl es-co es-cr es-do es-ec es-es es-sv es-gt es-hn es-mx es-ni es-pa es-py es-pe es-pr es-us es-uy es-ve\n"
 "X-Generator: Poedit 3.6\n"
 
-#: collective/geolocationbehavior/configure.zcml:19
+#: collective/geolocationbehavior/configure.zcml:23
 msgid "Add geographic locations to content items."
 msgstr "Añadir ubicaciones geográficas a los elementos de contenido."
 
-#: collective/geolocationbehavior/configure.zcml:19
+#: collective/geolocationbehavior/configure.zcml:23
 msgid "Geolocatable"
 msgstr "Geolocalizable"
 
-#: collective/geolocationbehavior/configure.zcml:39
+#: collective/geolocationbehavior/configure.zcml:43
 msgid "Installs the collective.geolocationbehavior package"
 msgstr "Instala el paquete collective.geolocationbehavior"
 
-#: collective/geolocationbehavior/configure.zcml:39
+#: collective/geolocationbehavior/configure.zcml:43
 msgid "collective.geolocationbehavior"
 msgstr "Instalar collective.geolocationbehavior"
 
-#: collective/geolocationbehavior/configure.zcml:47
+#: collective/geolocationbehavior/configure.zcml:51
 msgid "collective.geolocationbehavior uninstall"
 msgstr "Desinstalar collective.geolocationbehavior"
 

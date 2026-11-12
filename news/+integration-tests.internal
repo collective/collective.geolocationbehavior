@@ -1,0 +1,4 @@
+Add an integration test suite (install/uninstall, behavior registration,
+``latitude``/``longitude`` indexes and metadata, GeoJSON properties adapter)
+and a ``test`` extra, run on Plone 6.1 and 6.2 in CI.
+[petschki]

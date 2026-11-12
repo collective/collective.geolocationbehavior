@@ -60,6 +60,19 @@ This product has been translated into:
 - Spanish
 
 
+Compatibility
+=============
+
+Version 2.x supports Plone 6.1 and 6.2 on Python 3.10 to 3.14 and is a
+`PEP 420 <https://peps.python.org/pep-0420/>`_ native namespace package.
+Do not mix it with ``collective.*`` packages that still declare the namespace
+via ``pkg_resources``; in such environments (for example Plone 6.1 buildouts
+with older add-ons) install `horse-with-no-namespace
+<https://pypi.org/project/horse-with-no-namespace/>`_.
+
+For Plone 5.2 and 6.0 use the 1.7.x releases.
+
+
 Installation
 ============
 
@@ -133,7 +146,9 @@ If you are having issues, please let us know at our `issue tracker <https://gith
 License
 =======
 
-The project is licensed under the `GPLv2 <https://raw.githubusercontent.com/collective/collective.geolocationbehavior/refs/heads/master/LICENSE.GPL>`_.
+The project is licensed under the GNU General Public License, version 2 or
+(at your option) any later version (``GPL-2.0-or-later``), see ``LICENSE.txt`` and
+`LICENSE.GPL <https://raw.githubusercontent.com/collective/collective.geolocationbehavior/refs/heads/master/LICENSE.GPL>`_.
 
 .. _Cookieplone: https://github.com/plone/cookieplone
 .. _buildout: https://6.docs.plone.org/admin-guide/add-ons.html#buildout

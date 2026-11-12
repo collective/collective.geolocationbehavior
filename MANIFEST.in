@@ -1,4 +1,6 @@
 recursive-include src *
 recursive-include docs *
+recursive-exclude news *
+exclude news
 include *
 global-exclude *.pyc

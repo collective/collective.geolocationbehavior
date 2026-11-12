@@ -1,0 +1,3 @@
+Require Plone 6.1 or 6.2 and Python 3.10 to 3.14, drop support for
+Plone 5.2 and 6.0.
+[erral, petschki]

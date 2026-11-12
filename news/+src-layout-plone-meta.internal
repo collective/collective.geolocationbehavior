@@ -1,0 +1,4 @@
+Move to the ``src/`` layout and configure the repository with plone/meta
+(2.11.1): tox, GitHub workflows, pre-commit with pyupgrade, isort, black,
+zpretty, flake8, codespell, check-manifest, pyroma, i18ndude.
+[erral, petschki]

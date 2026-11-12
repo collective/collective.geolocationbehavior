@@ -63,7 +63,7 @@ This product has been translated into:
 Compatibility
 =============
 
-Version 3.x supports Plone 6.1 and 6.2 on Python 3.10 to 3.14 and is a
+Version 2.x supports Plone 6.1 and 6.2 on Python 3.10 to 3.14 and is a
 `PEP 420 <https://peps.python.org/pep-0420/>`_ native namespace package.
 Do not mix it with ``collective.*`` packages that still declare the namespace
 via ``pkg_resources``; in such environments (for example Plone 6.1 buildouts

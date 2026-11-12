@@ -27,8 +27,10 @@ setup(
     keywords="plone dexterity behavior geographic locations contents",
     author="Jesse Snyder, davisagli et al",
     author_email="collective@plone.org",
-    url="https://github.com/collective/collective.geolocationbehavior/",
-    license="GPL-2.0-or-later",
+    project_urls={
+        "Homepage": "https://github.com/collective/collective.geolocationbehavior/",
+    },
+    license_expression="GPL-2.0-or-later",
     include_package_data=True,
     zip_safe=False,
     python_requires=">=3.10",

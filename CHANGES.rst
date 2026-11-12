@@ -2,8 +2,7 @@ Changelog
 =========
 
 
-3.0.0 (unreleased)
-------------------
+.. towncrier release notes start
 
 Breaking changes:
 

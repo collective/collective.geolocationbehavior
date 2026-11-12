@@ -67,6 +67,8 @@ target = "plone"
 [project.optional-dependencies]
 test = [
     "Products.CMFPlone",
+    # plone.formwidget.geolocation < 4 imports plone.api without
+    # declaring it, so the test layer would not load otherwise.
     "plone.api",
     "plone.app.contenttypes[test]",
     "plone.app.testing",
@@ -85,7 +87,6 @@ readme = {file = ["README.rst", "CHANGES.rst"]}
 [tool.towncrier]
 directory = "news/"
 filename = "CHANGES.rst"
-start_string = ".. towncrier release notes start"
 title_format = "{version} ({project_date})"
 underlines = ["-", ""]
 

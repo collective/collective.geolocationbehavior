@@ -9,8 +9,10 @@ setup(
     long_description="{}\n{}".format(
         open("README.rst").read(), open("CHANGES.rst").read()
     ),
+    long_description_content_type="text/x-rst",
     classifiers=[
         "Framework :: Plone",
+        "Framework :: Plone :: 6.1",
         "Framework :: Plone :: 6.2",
         "Framework :: Plone :: Addon",
         "Programming Language :: Python",
@@ -18,15 +20,15 @@ setup(
         "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: 3.12",
         "Programming Language :: Python :: 3.13",
+        "Programming Language :: Python :: 3.14",
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Development Status :: 5 - Production/Stable",
-        "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
     ],
     keywords="plone dexterity behavior geographic locations contents",
     author="Jesse Snyder, davisagli et al",
     author_email="collective@plone.org",
     url="https://github.com/collective/collective.geolocationbehavior/",
-    license="GPL",
+    license="GPL-2.0-or-later",
     include_package_data=True,
     zip_safe=False,
     python_requires=">=3.10",
@@ -50,6 +52,17 @@ setup(
         "zope.lifecycleevent",
         "zope.event",
     ],
+    extras_require={
+        "test": [
+            # plone.formwidget.geolocation < 4 imports plone.api without
+            # declaring it, so the test layer would not load otherwise.
+            "plone.api",
+            "plone.app.contenttypes[test]",
+            "plone.app.testing",
+            "plone.dexterity",
+            "Products.CMFPlone",
+        ],
+    },
     entry_points="""
       [z3c.autoinclude.plugin]
       target = plone

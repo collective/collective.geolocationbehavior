@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-07-08 09:57+0000\n"
+"POT-Creation-Date: 2026-09-16 08:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,25 +17,25 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.geolocationbehavior\n"
 
-#: collective/geolocationbehavior/configure.zcml:19
+#: collective/geolocationbehavior/configure.zcml:23
 msgid "Add geographic locations to content items."
-msgstr ""
+msgstr "Versieht Inhalte mit einem geografischen Standort."
 
-#: collective/geolocationbehavior/configure.zcml:19
+#: collective/geolocationbehavior/configure.zcml:23
 msgid "Geolocatable"
-msgstr ""
+msgstr "Geolokalisierbar"
 
-#: collective/geolocationbehavior/configure.zcml:39
+#: collective/geolocationbehavior/configure.zcml:43
 msgid "Installs the collective.geolocationbehavior package"
-msgstr ""
+msgstr "Installiert das Paket collective.geolocationbehavior"
 
-#: collective/geolocationbehavior/configure.zcml:39
+#: collective/geolocationbehavior/configure.zcml:43
 msgid "collective.geolocationbehavior"
-msgstr ""
+msgstr "collective.geolocationbehavior"
 
-#: collective/geolocationbehavior/configure.zcml:47
+#: collective/geolocationbehavior/configure.zcml:51
 msgid "collective.geolocationbehavior uninstall"
-msgstr ""
+msgstr "collective.geolocationbehavior deinstallieren"
 
 #. Default: "Click on the map to select a location, or use the text input to search by address."
 #: collective/geolocationbehavior/geolocation.py:27

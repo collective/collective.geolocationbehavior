@@ -1,5 +1,6 @@
 from collective.geolocationbehavior import _
 from collective.geolocationbehavior.interfaces import IGeoJSONProperties
+from importlib.util import find_spec
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.formwidget.geolocation.field import GeolocationField
 from plone.supermodel import model
@@ -9,17 +10,12 @@ from zope.interface import implementer
 from zope.interface import Interface
 from zope.interface import provider
 
-import pkg_resources
-
-try:
-    pkg_resources.get_distribution("plone.app.multilingual")
-except pkg_resources.DistributionNotFound:
-    HAS_PAM = False
-else:
+# plone.app.multilingual is optional: mark the field language independent
+# when it is available (pkg_resources is deprecated, so probe the import).
+HAS_PAM = find_spec("plone.app.multilingual") is not None
+if HAS_PAM:
     from plone.app.multilingual.dx.interfaces import ILanguageIndependentField
     from zope.interface import alsoProvides
-
-    HAS_PAM = True
 
 
 @provider(IFormFieldProvider)

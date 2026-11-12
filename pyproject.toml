@@ -6,6 +6,82 @@ requires = ["setuptools>=68.2,<83", "wheel"]
 
 
 
+# START-MARKER-MANUAL-CONFIG
+# Anything from here until END-MARKER-MANUAL-CONFIG
+# will be kept by plone.meta
+
+[project]
+name = "collective.geolocationbehavior"
+version = "3.0.0.dev0"
+description = "Dexterity behavior to add geographic locations to contents."
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: Plone",
+    "Framework :: Plone :: 6.1",
+    "Framework :: Plone :: 6.2",
+    "Framework :: Plone :: Addon",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+license = "GPL-2.0-or-later"
+dynamic = ["readme"]
+requires-python = ">=3.10"
+authors = [
+    {name = "Jesse Snyder, davisagli et al",email = "collective@plone.org"},
+]
+dependencies = [
+    "Products.CMFCore",
+    "Products.GenericSetup",
+    "plone.app.dexterity",
+    "plone.autoform",
+    "plone.behavior",
+    "plone.browserlayer",
+    "plone.formwidget.geolocation",
+    "plone.indexer",
+    "plone.supermodel",
+    "plone.uuid",
+    "zope.annotation",
+    "zope.component",
+    "zope.event",
+    "zope.i18nmessageid",
+    "zope.interface",
+    "zope.lifecycleevent",
+]
+keywords = [
+    "plone",
+    "dexterity",
+    "behavior",
+    "geographic",
+    "locations",
+    "contents",
+]
+
+[project.entry-points."plone.autoinclude.plugin"]
+target = "plone"
+
+[project.optional-dependencies]
+test = [
+    "Products.CMFPlone",
+    "plone.api",
+    "plone.app.contenttypes[test]",
+    "plone.app.testing",
+    "plone.dexterity",
+]
+
+[project.urls]
+Homepage = "https://github.com/collective/collective.geolocationbehavior/"
+Issues = "https://github.com/collective/collective.geolocationbehavior/issues"
+Changelog = "https://github.com/collective/collective.geolocationbehavior/blob/master/CHANGES.rst"
+
+[tool.setuptools.dynamic]
+readme = {file = ["README.rst", "CHANGES.rst"]}
+# END-MARKER-MANUAL-CONFIG
+
 [tool.towncrier]
 directory = "news/"
 filename = "CHANGES.rst"

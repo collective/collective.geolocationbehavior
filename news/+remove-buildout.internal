@@ -1,3 +1,0 @@
-Remove the obsolete ``buildout.cfg`` and ``docs/INSTALL.txt``; fix
-``build-i18n.sh`` for the ``src/`` layout.
-[petschki]

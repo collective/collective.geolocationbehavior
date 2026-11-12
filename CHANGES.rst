@@ -1,8 +1,63 @@
 Changelog
 =========
 
-
 .. towncrier release notes start
+
+2.0.0 (2026-11-12)
+------------------
+
+Breaking changes:
+
+
+- Require Plone 6.1 or 6.2 and Python 3.10 to 3.14, drop support for
+  Plone 5.2 and 6.0.
+  [erral, petschki]
+- Switch to a PEP 420 native namespace package (no ``collective/__init__.py``
+  with ``pkg_resources`` namespace declaration any more). Mixing native and
+  ``pkg_resources``-style packages in the ``collective`` namespace does not
+  work; in environments that still contain old-style ``collective.*`` eggs
+  (typically Plone 6.1 buildouts) use ``horse-with-no-namespace``.
+  [erral, petschki]
+
+
+New features:
+
+
+- Add Spanish translation and new translation strings.
+  [macagua]
+- Complete the German translation.
+  [petschki]
+
+
+Internal:
+
+
+- Add an integration test suite (install/uninstall, behavior registration,
+  ``latitude``/``longitude`` indexes and metadata, GeoJSON properties adapter)
+  and a ``test`` extra, run on Plone 6.1 and 6.2 in CI.
+  [petschki]
+- Fixed some errors from code-analysis scripts.
+  [macagua]
+- Move package metadata from ``setup.py`` to ``pyproject.toml``.
+  [petschki]
+- Move to the ``src/`` layout and configure the repository with plone/meta
+  (2.11.1): tox, GitHub workflows, pre-commit with pyupgrade, isort, black,
+  zpretty, flake8, codespell, check-manifest, pyroma, i18ndude.
+  [erral, petschki]
+- Remove the obsolete ``buildout.cfg`` and ``docs/INSTALL.txt``; fix
+  ``build-i18n.sh`` for the ``src/`` layout.
+  [petschki]
+- Replace the deprecated ``pkg_resources`` probe for ``plone.app.multilingual``
+  with ``importlib`` (setuptools 81+ warns about ``pkg_resources``).
+  [petschki]
+- Update configuration files.
+  [plone devs]
+- Use the SPDX license expression ``GPL-2.0-or-later`` (matching the
+  license grant in ``LICENSE.txt``) instead of the deprecated license
+  classifier; ``LICENSE.txt`` moved to the package root next to
+  ``LICENSE.GPL``.
+  [petschki]
+
 
 1.7.2 (2021-09-16)
 ------------------

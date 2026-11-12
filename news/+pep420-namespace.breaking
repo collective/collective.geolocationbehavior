@@ -1,6 +1,0 @@
-Switch to a PEP 420 native namespace package (no ``collective/__init__.py``
-with ``pkg_resources`` namespace declaration any more). Mixing native and
-``pkg_resources``-style packages in the ``collective`` namespace does not
-work; in environments that still contain old-style ``collective.*`` eggs
-(typically Plone 6.1 buildouts) use ``horse-with-no-namespace``.
-[erral, petschki]
